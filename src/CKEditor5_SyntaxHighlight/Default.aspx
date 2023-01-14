@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Using CKEditor 5 (with Code Block) + Highlight.js (output) in ASP.NET</title>
     <style type="text/css">
         html, body, form {
             height: 100%;
@@ -53,9 +53,10 @@
 
     <div style="padding: 8px;">
         <h1>Using CKEditor 5 (with Code Block) + Highlight.js (output) in ASP.NET</h1>
-        Tutorial / Article: 
+        Source Code / Tutorial / Article: 
+        <a href="https://github.com/adriancs2/ckeditor5.highlightjs.aspnet">Github.com</a> |
         <a href="https://adriancs.com/aspnet-webforms/884/using-ckeditor-5-with-code-block-highlight-js-output-in-asp-net/" target="_blank">adriancs.com</a> |
-        <a href="">CodeProject.com</a>
+        <a href="https://www.codeproject.com/Articles/5351960/Using-CKEditor-5-with-Code-Block-Highlight-js">CodeProject.com</a>
     </div>
 
     <form id="form1" runat="server">

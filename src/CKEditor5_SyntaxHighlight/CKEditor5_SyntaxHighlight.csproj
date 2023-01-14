@@ -65,7 +65,6 @@
     <Content Include="Default.aspx" />
     <Content Include="default.txt" />
     <Content Include="file.txt" />
-    <Content Include="highlight.js\highlight.js" />
     <Content Include="highlight.js\highlight.min.js" />
     <Content Include="highlight.js\styles\a11y-dark.min.css" />
     <Content Include="highlight.js\styles\a11y-light.min.css" />
@@ -338,10 +337,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="highlight.js\DIGESTS.md" />
-    <Content Include="highlight.js\LICENSE" />
-    <Content Include="highlight.js\package.json" />
-    <Content Include="highlight.js\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
