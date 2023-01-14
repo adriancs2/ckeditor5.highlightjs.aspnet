@@ -1,0 +1,81 @@
+<h3>C#</h3><pre><code class="language-cs">using System.IO.Compression;
+#pragma warning disable 414, 3021
+// A comment in C#
+namespace MyApplication
+{
+    [Obsolete("...")]
+    class Program : IInterface
+    {
+        public static List&lt;int&gt; JustDoIt(int count)
+        {
+            Span&lt;int&gt; numbers = stackalloc int[length];
+            Console.WriteLine($"Hello {Name}!");
+            
+            for (int i = 0; i &lt; 5; i++) 
+            {
+                Console.WriteLine(i);
+            }
+            
+            return new List&lt;int&gt;(new int[] { 1, 2, 3 })
+        }
+    }
+}</code></pre><h3>HTML</h3><pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;title&gt;Title&lt;/title&gt;
+&lt;style&gt;body {width: 500px;}&lt;/style&gt;
+&lt;script type="application/javascript"&gt;
+  function $init() {return true;}
+&lt;/script&gt;
+&lt;body&gt;
+  &lt;p checked class="title" id='title'&gt;Title&lt;/p&gt;
+  &lt;!-- here goes the rest of the page --&gt;
+&lt;/body&gt;</code></pre><h3>CSS</h3><pre><code class="language-css">/* a comment in css */
+@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+  --heading-1: 30px/32px Helvetica, sans-serif;
+}
+@import url(print.css);
+@media print {
+  a[href^=http]::after {
+    content: attr(href)
+  }
+}</code></pre><h3>JAVASCRIPT</h3><pre><code class="language-javascript">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+  // A comment in javascript
+  return (
+    &lt;div&gt;
+      &lt;web-component&gt;{block}&lt;/web-component&gt;
+    &lt;/div&gt;
+  )
+}
+export  $initHighlight;</code></pre><h3>JSON</h3><pre><code class="language-json">[
+  {
+    "title": "apples",
+    "count": [12000, 20000],
+    "description": {"text": "...", "sensitive": false}
+  },
+  {
+    "title": "oranges",
+    "count": [17500, null],
+    "description": {"text": "...", "sensitive": false}
+  }
+]</code></pre><h3>PHP</h3><pre><code class="language-php">for ($x = 0; $x &lt;= 10; $x++) {
+  echo "The number is: $x &lt;br&gt;";
+}
+function writeMsg() {
+  echo "Hello world!";
+}
+writeMsg(); // call the function</code></pre><hr><h2 style="margin-left:0px;">Tips and tweaks</h2><p>To type <strong>before the code block</strong>: Put the selection at the beginning of the first line of the code block and press <span class="text-big" style="color:hsl(0,75%,60%);font-family:'Courier New', Courier, monospace;"><strong>Enter</strong></span>. Move the selection to the empty line that has been created and press <span class="text-big" style="color:hsl(0,75%,60%);font-family:'Courier New', Courier, monospace;"><strong>Enter </strong></span>again. A new paragraph that you can type in will be created before the code block.</p><p><img src="https://ckeditor.com/docs/ckeditor5/latest/assets/img/code-blocks-typing-before.gif" alt="The animation shows typing before the code blocks in CKEditor 5 rich text editor."></p><p>To type <strong>after the code block</strong>: Put the selection at the end of the last line of the code block and press <span class="text-big" style="color:hsl(0,75%,60%);font-family:'Courier New', Courier, monospace;"><strong>Enter </strong></span>three times. A new paragraph that you can type in will be created after the code block.</p><p><img src="https://ckeditor.com/docs/ckeditor5/latest/assets/img/code-blocks-typing-after.gif" alt="The animation shows typing after the code blocks in CKEditor 5 rich text editor."></p>

@@ -1,0 +1,384 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9A85751-79EA-4425-AFC1-493053A7189E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CKEditor5_SyntaxHighlight</RootNamespace>
+    <AssemblyName>CKEditor5_SyntaxHighlight</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CKEditor5\ckeditor.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="default.txt" />
+    <Content Include="file.txt" />
+    <Content Include="highlight.js\highlight.js" />
+    <Content Include="highlight.js\highlight.min.js" />
+    <Content Include="highlight.js\styles\a11y-dark.min.css" />
+    <Content Include="highlight.js\styles\a11y-light.min.css" />
+    <Content Include="highlight.js\styles\agate.min.css" />
+    <Content Include="highlight.js\styles\an-old-hope.min.css" />
+    <Content Include="highlight.js\styles\androidstudio.min.css" />
+    <Content Include="highlight.js\styles\arduino-light.min.css" />
+    <Content Include="highlight.js\styles\arta.min.css" />
+    <Content Include="highlight.js\styles\ascetic.min.css" />
+    <Content Include="highlight.js\styles\atom-one-dark-reasonable.min.css" />
+    <Content Include="highlight.js\styles\atom-one-dark.min.css" />
+    <Content Include="highlight.js\styles\atom-one-light.min.css" />
+    <Content Include="highlight.js\styles\base16\3024.min.css" />
+    <Content Include="highlight.js\styles\base16\apathy.min.css" />
+    <Content Include="highlight.js\styles\base16\apprentice.min.css" />
+    <Content Include="highlight.js\styles\base16\ashes.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-cave-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-cave.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-dune-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-dune.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-estuary-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-estuary.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-forest-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-forest.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-heath-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-heath.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-lakeside-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-lakeside.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-plateau-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-plateau.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-savanna-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-savanna.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-seaside-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-seaside.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-sulphurpool-light.min.css" />
+    <Content Include="highlight.js\styles\base16\atelier-sulphurpool.min.css" />
+    <Content Include="highlight.js\styles\base16\atlas.min.css" />
+    <Content Include="highlight.js\styles\base16\bespin.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-bathory.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-burzum.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-dark-funeral.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-gorgoroth.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-immortal.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-khold.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-marduk.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-mayhem.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-nile.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal-venom.min.css" />
+    <Content Include="highlight.js\styles\base16\black-metal.min.css" />
+    <Content Include="highlight.js\styles\base16\brewer.min.css" />
+    <Content Include="highlight.js\styles\base16\bright.min.css" />
+    <Content Include="highlight.js\styles\base16\brogrammer.min.css" />
+    <Content Include="highlight.js\styles\base16\brush-trees-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\brush-trees.min.css" />
+    <Content Include="highlight.js\styles\base16\chalk.min.css" />
+    <Content Include="highlight.js\styles\base16\circus.min.css" />
+    <Content Include="highlight.js\styles\base16\classic-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\classic-light.min.css" />
+    <Content Include="highlight.js\styles\base16\codeschool.min.css" />
+    <Content Include="highlight.js\styles\base16\colors.min.css" />
+    <Content Include="highlight.js\styles\base16\cupcake.min.css" />
+    <Content Include="highlight.js\styles\base16\cupertino.min.css" />
+    <Content Include="highlight.js\styles\base16\danqing.min.css" />
+    <Content Include="highlight.js\styles\base16\darcula.min.css" />
+    <Content Include="highlight.js\styles\base16\dark-violet.min.css" />
+    <Content Include="highlight.js\styles\base16\darkmoss.min.css" />
+    <Content Include="highlight.js\styles\base16\darktooth.min.css" />
+    <Content Include="highlight.js\styles\base16\decaf.min.css" />
+    <Content Include="highlight.js\styles\base16\default-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\default-light.min.css" />
+    <Content Include="highlight.js\styles\base16\dirtysea.min.css" />
+    <Content Include="highlight.js\styles\base16\dracula.min.css" />
+    <Content Include="highlight.js\styles\base16\edge-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\edge-light.min.css" />
+    <Content Include="highlight.js\styles\base16\eighties.min.css" />
+    <Content Include="highlight.js\styles\base16\embers.min.css" />
+    <Content Include="highlight.js\styles\base16\equilibrium-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\equilibrium-gray-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\equilibrium-gray-light.min.css" />
+    <Content Include="highlight.js\styles\base16\equilibrium-light.min.css" />
+    <Content Include="highlight.js\styles\base16\espresso.min.css" />
+    <Content Include="highlight.js\styles\base16\eva-dim.min.css" />
+    <Content Include="highlight.js\styles\base16\eva.min.css" />
+    <Content Include="highlight.js\styles\base16\flat.min.css" />
+    <Content Include="highlight.js\styles\base16\framer.min.css" />
+    <Content Include="highlight.js\styles\base16\fruit-soda.min.css" />
+    <Content Include="highlight.js\styles\base16\gigavolt.min.css" />
+    <Content Include="highlight.js\styles\base16\github.min.css" />
+    <Content Include="highlight.js\styles\base16\google-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\google-light.min.css" />
+    <Content Include="highlight.js\styles\base16\grayscale-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\grayscale-light.min.css" />
+    <Content Include="highlight.js\styles\base16\green-screen.min.css" />
+    <Content Include="highlight.js\styles\base16\gruvbox-dark-hard.min.css" />
+    <Content Include="highlight.js\styles\base16\gruvbox-dark-medium.min.css" />
+    <Content Include="highlight.js\styles\base16\gruvbox-dark-pale.min.css" />
+    <Content Include="highlight.js\styles\base16\gruvbox-dark-soft.min.css" />
+    <Content Include="highlight.js\styles\base16\gruvbox-light-hard.min.css" />
+    <Content Include="highlight.js\styles\base16\gruvbox-light-medium.min.css" />
+    <Content Include="highlight.js\styles\base16\gruvbox-light-soft.min.css" />
+    <Content Include="highlight.js\styles\base16\hardcore.min.css" />
+    <Content Include="highlight.js\styles\base16\harmonic16-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\harmonic16-light.min.css" />
+    <Content Include="highlight.js\styles\base16\heetch-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\heetch-light.min.css" />
+    <Content Include="highlight.js\styles\base16\helios.min.css" />
+    <Content Include="highlight.js\styles\base16\hopscotch.min.css" />
+    <Content Include="highlight.js\styles\base16\horizon-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\horizon-light.min.css" />
+    <Content Include="highlight.js\styles\base16\humanoid-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\humanoid-light.min.css" />
+    <Content Include="highlight.js\styles\base16\ia-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\ia-light.min.css" />
+    <Content Include="highlight.js\styles\base16\icy-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\ir-black.min.css" />
+    <Content Include="highlight.js\styles\base16\isotope.min.css" />
+    <Content Include="highlight.js\styles\base16\kimber.min.css" />
+    <Content Include="highlight.js\styles\base16\london-tube.min.css" />
+    <Content Include="highlight.js\styles\base16\macintosh.min.css" />
+    <Content Include="highlight.js\styles\base16\marrakesh.min.css" />
+    <Content Include="highlight.js\styles\base16\materia.min.css" />
+    <Content Include="highlight.js\styles\base16\material-darker.min.css" />
+    <Content Include="highlight.js\styles\base16\material-lighter.min.css" />
+    <Content Include="highlight.js\styles\base16\material-palenight.min.css" />
+    <Content Include="highlight.js\styles\base16\material-vivid.min.css" />
+    <Content Include="highlight.js\styles\base16\material.min.css" />
+    <Content Include="highlight.js\styles\base16\mellow-purple.min.css" />
+    <Content Include="highlight.js\styles\base16\mexico-light.min.css" />
+    <Content Include="highlight.js\styles\base16\mocha.min.css" />
+    <Content Include="highlight.js\styles\base16\monokai.min.css" />
+    <Content Include="highlight.js\styles\base16\nebula.min.css" />
+    <Content Include="highlight.js\styles\base16\nord.min.css" />
+    <Content Include="highlight.js\styles\base16\nova.min.css" />
+    <Content Include="highlight.js\styles\base16\ocean.min.css" />
+    <Content Include="highlight.js\styles\base16\oceanicnext.min.css" />
+    <Content Include="highlight.js\styles\base16\one-light.min.css" />
+    <Content Include="highlight.js\styles\base16\onedark.min.css" />
+    <Content Include="highlight.js\styles\base16\outrun-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\papercolor-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\papercolor-light.min.css" />
+    <Content Include="highlight.js\styles\base16\paraiso.min.css" />
+    <Content Include="highlight.js\styles\base16\pasque.min.css" />
+    <Content Include="highlight.js\styles\base16\phd.min.css" />
+    <Content Include="highlight.js\styles\base16\pico.min.css" />
+    <Content Include="highlight.js\styles\base16\pop.min.css" />
+    <Content Include="highlight.js\styles\base16\porple.min.css" />
+    <Content Include="highlight.js\styles\base16\qualia.min.css" />
+    <Content Include="highlight.js\styles\base16\railscasts.min.css" />
+    <Content Include="highlight.js\styles\base16\rebecca.min.css" />
+    <Content Include="highlight.js\styles\base16\ros-pine-dawn.min.css" />
+    <Content Include="highlight.js\styles\base16\ros-pine-moon.min.css" />
+    <Content Include="highlight.js\styles\base16\ros-pine.min.css" />
+    <Content Include="highlight.js\styles\base16\sagelight.min.css" />
+    <Content Include="highlight.js\styles\base16\sandcastle.min.css" />
+    <Content Include="highlight.js\styles\base16\seti-ui.min.css" />
+    <Content Include="highlight.js\styles\base16\shapeshifter.min.css" />
+    <Content Include="highlight.js\styles\base16\silk-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\silk-light.min.css" />
+    <Content Include="highlight.js\styles\base16\snazzy.min.css" />
+    <Content Include="highlight.js\styles\base16\solar-flare-light.min.css" />
+    <Content Include="highlight.js\styles\base16\solar-flare.min.css" />
+    <Content Include="highlight.js\styles\base16\solarized-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\solarized-light.min.css" />
+    <Content Include="highlight.js\styles\base16\spacemacs.min.css" />
+    <Content Include="highlight.js\styles\base16\summercamp.min.css" />
+    <Content Include="highlight.js\styles\base16\summerfruit-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\summerfruit-light.min.css" />
+    <Content Include="highlight.js\styles\base16\synth-midnight-terminal-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\synth-midnight-terminal-light.min.css" />
+    <Content Include="highlight.js\styles\base16\tango.min.css" />
+    <Content Include="highlight.js\styles\base16\tender.min.css" />
+    <Content Include="highlight.js\styles\base16\tomorrow-night.min.css" />
+    <Content Include="highlight.js\styles\base16\tomorrow.min.css" />
+    <Content Include="highlight.js\styles\base16\twilight.min.css" />
+    <Content Include="highlight.js\styles\base16\unikitty-dark.min.css" />
+    <Content Include="highlight.js\styles\base16\unikitty-light.min.css" />
+    <Content Include="highlight.js\styles\base16\vulcan.min.css" />
+    <Content Include="highlight.js\styles\base16\windows-10-light.min.css" />
+    <Content Include="highlight.js\styles\base16\windows-10.min.css" />
+    <Content Include="highlight.js\styles\base16\windows-95-light.min.css" />
+    <Content Include="highlight.js\styles\base16\windows-95.min.css" />
+    <Content Include="highlight.js\styles\base16\windows-high-contrast-light.min.css" />
+    <Content Include="highlight.js\styles\base16\windows-high-contrast.min.css" />
+    <Content Include="highlight.js\styles\base16\windows-nt-light.min.css" />
+    <Content Include="highlight.js\styles\base16\windows-nt.min.css" />
+    <Content Include="highlight.js\styles\base16\woodland.min.css" />
+    <Content Include="highlight.js\styles\base16\xcode-dusk.min.css" />
+    <Content Include="highlight.js\styles\base16\zenburn.min.css" />
+    <Content Include="highlight.js\styles\brown-paper.min.css" />
+    <Content Include="highlight.js\styles\brown-papersq.png" />
+    <Content Include="highlight.js\styles\codepen-embed.min.css" />
+    <Content Include="highlight.js\styles\color-brewer.min.css" />
+    <Content Include="highlight.js\styles\dark.min.css" />
+    <Content Include="highlight.js\styles\default.min.css" />
+    <Content Include="highlight.js\styles\devibeans.min.css" />
+    <Content Include="highlight.js\styles\docco.min.css" />
+    <Content Include="highlight.js\styles\far.min.css" />
+    <Content Include="highlight.js\styles\felipec.min.css" />
+    <Content Include="highlight.js\styles\foundation.min.css" />
+    <Content Include="highlight.js\styles\github-dark-dimmed.min.css" />
+    <Content Include="highlight.js\styles\github-dark.min.css" />
+    <Content Include="highlight.js\styles\github.min.css" />
+    <Content Include="highlight.js\styles\gml.min.css" />
+    <Content Include="highlight.js\styles\googlecode.min.css" />
+    <Content Include="highlight.js\styles\gradient-dark.min.css" />
+    <Content Include="highlight.js\styles\gradient-light.min.css" />
+    <Content Include="highlight.js\styles\grayscale.min.css" />
+    <Content Include="highlight.js\styles\hybrid.min.css" />
+    <Content Include="highlight.js\styles\idea.min.css" />
+    <Content Include="highlight.js\styles\intellij-light.min.css" />
+    <Content Include="highlight.js\styles\ir-black.min.css" />
+    <Content Include="highlight.js\styles\isbl-editor-dark.min.css" />
+    <Content Include="highlight.js\styles\isbl-editor-light.min.css" />
+    <Content Include="highlight.js\styles\kimbie-dark.min.css" />
+    <Content Include="highlight.js\styles\kimbie-light.min.css" />
+    <Content Include="highlight.js\styles\lightfair.min.css" />
+    <Content Include="highlight.js\styles\lioshi.min.css" />
+    <Content Include="highlight.js\styles\magula.min.css" />
+    <Content Include="highlight.js\styles\mono-blue.min.css" />
+    <Content Include="highlight.js\styles\monokai-sublime.min.css" />
+    <Content Include="highlight.js\styles\monokai.min.css" />
+    <Content Include="highlight.js\styles\night-owl.min.css" />
+    <Content Include="highlight.js\styles\nnfx-dark.min.css" />
+    <Content Include="highlight.js\styles\nnfx-light.min.css" />
+    <Content Include="highlight.js\styles\nord.min.css" />
+    <Content Include="highlight.js\styles\obsidian.min.css" />
+    <Content Include="highlight.js\styles\panda-syntax-dark.min.css" />
+    <Content Include="highlight.js\styles\panda-syntax-light.min.css" />
+    <Content Include="highlight.js\styles\paraiso-dark.min.css" />
+    <Content Include="highlight.js\styles\paraiso-light.min.css" />
+    <Content Include="highlight.js\styles\pojoaque.jpg" />
+    <Content Include="highlight.js\styles\pojoaque.min.css" />
+    <Content Include="highlight.js\styles\purebasic.min.css" />
+    <Content Include="highlight.js\styles\qtcreator-dark.min.css" />
+    <Content Include="highlight.js\styles\qtcreator-light.min.css" />
+    <Content Include="highlight.js\styles\rainbow.min.css" />
+    <Content Include="highlight.js\styles\routeros.min.css" />
+    <Content Include="highlight.js\styles\school-book.min.css" />
+    <Content Include="highlight.js\styles\shades-of-purple.min.css" />
+    <Content Include="highlight.js\styles\srcery.min.css" />
+    <Content Include="highlight.js\styles\stackoverflow-dark.min.css" />
+    <Content Include="highlight.js\styles\stackoverflow-light.min.css" />
+    <Content Include="highlight.js\styles\sunburst.min.css" />
+    <Content Include="highlight.js\styles\tokyo-night-dark.min.css" />
+    <Content Include="highlight.js\styles\tokyo-night-light.min.css" />
+    <Content Include="highlight.js\styles\tomorrow-night-blue.min.css" />
+    <Content Include="highlight.js\styles\tomorrow-night-bright.min.css" />
+    <Content Include="highlight.js\styles\vs.min.css" />
+    <Content Include="highlight.js\styles\vs2015.min.css" />
+    <Content Include="highlight.js\styles\xcode.min.css" />
+    <Content Include="highlight.js\styles\xt256.min.css" />
+    <Content Include="Render.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Render.aspx.cs">
+      <DependentUpon>Render.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Render.aspx.designer.cs">
+      <DependentUpon>Render.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="highlight.js\DIGESTS.md" />
+    <Content Include="highlight.js\LICENSE" />
+    <Content Include="highlight.js\package.json" />
+    <Content Include="highlight.js\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56680</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56680/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
