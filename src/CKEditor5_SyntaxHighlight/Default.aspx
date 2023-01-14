@@ -68,7 +68,7 @@
 
 
                         <asp:Button ID="btSave" runat="server" Text="Save" OnClick="btSave_Click" />
-                        <asp:Button ID="btLoadDefault" runat="server" Text="Load Default" OnClick="btLoadDefault_Click" />
+                        <asp:Button ID="btLoadDefault" runat="server" Text="Load Default Text" OnClick="btLoadDefault_Click" />
 
                         <div style="height: 2px"></div>
 
@@ -78,7 +78,7 @@
                 <td style="width: 2%;"></td>
                 <td style="width: 49%; vertical-align: top;">
                     <h2>Output</h2>
-                    <asp:PlaceHolder ID="ph1" runat="server"></asp:PlaceHolder>
+                    <iframe class='framerender' src='Render.aspx'></iframe>
                 </td>
             </tr>
         </table>

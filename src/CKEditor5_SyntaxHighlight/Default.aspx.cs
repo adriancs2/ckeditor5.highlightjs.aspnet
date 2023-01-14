@@ -10,11 +10,15 @@ namespace CKEditor5_SyntaxHighlight
 {
     public partial class Default : System.Web.UI.Page
     {
-        string filePath
+        string text
         {
             get
             {
-                return Server.MapPath("~/file.txt");
+                return Session["text"] + "";
+            }
+            set
+            {
+                Session["text"] = value;
             }
         }
 
@@ -22,36 +26,30 @@ namespace CKEditor5_SyntaxHighlight
         {
             if (!IsPostBack)
             {
-                txtEditor.Text = File.ReadAllText(filePath);
-                LoadText();
+                if (text.Length == 0)
+                {
+                    text = GetDefaultText();
+                }
+
+                txtEditor.Text = text;
             }
         }
 
-        void LoadText()
+        string GetDefaultText()
         {
-            string iframe = $"<iframe class='framerender' src='Render.aspx'></iframe>";
-            ph1.Controls.Add(new LiteralControl(iframe));
+            string defaultFile = Server.MapPath("~/default.txt");
+            return File.ReadAllText(defaultFile);
         }
 
         protected void btSave_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(filePath, txtEditor.Text);
-            LoadText();
+            text = txtEditor.Text;
         }
 
         protected void btLoadDefault_Click(object sender, EventArgs e)
         {
-            string defaultFile = Server.MapPath("~/default.txt");
-
-            if (File.Exists(filePath))
-            {
-                File.Delete(filePath);
-            }
-
-            File.Copy(defaultFile, filePath);
-
-            txtEditor.Text = File.ReadAllText(filePath);
-            LoadText();
+            text = GetDefaultText();
+            txtEditor.Text = text;
         }
     }
 }
