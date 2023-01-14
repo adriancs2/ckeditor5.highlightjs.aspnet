@@ -7,7 +7,6 @@
     <title>Using CKEditor 5 (with Code Block) + Highlight.js (output) in ASP.NET</title>
     <style type="text/css">
         html, body, form {
-            height: 100%;
             width: 100%;
             margin: 0;
             padding: 0;
