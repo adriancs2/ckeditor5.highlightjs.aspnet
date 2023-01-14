@@ -6,14 +6,12 @@
 <head id="head" runat="server">
     <title></title>
     <style type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
         body {
             font-family: Arial;
             font-size: 10pt;
             padding: 0;
             margin: 0;
-            padding-top: 25px;
+            padding-top: 45px;
         }
 
         form {
@@ -28,14 +26,18 @@
             padding: 10px;
         }
 
-        pre, code {
-            font-family: "Roboto Mono", Consolas, "Cascadia Mono", Courier New, Courier, monospace;
-            font-size: 9pt;
-            line-height: 140%;
-        }
-
         img {
             max-width: 600px;
+        }
+    </style>
+
+    <style id="style1" type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+        pre, code {
+            font-family: "Roboto Mono", monospace;
+            font-size: 9pt;
+            line-height: 140%;
         }
     </style>
 
@@ -45,6 +47,8 @@
 <body>
 
     <form id="form1" runat="server">
+
+        <input type="submit" disabled="disabled" style="display: none;" aria-hidden="true" />
 
         <asp:Button ID="btRefresh" runat="server" Text="Refresh" OnClick="btRefresh_Click" />
 
@@ -127,6 +131,52 @@
             <option value="xt256.min.css">xt256.min.css</option>
         </select>
 
+        Font:
+
+        <select id="dropFont" onchange="updateFont();">
+            <option value="Roboto+Mono">Roboto Mono</option>
+            <option value="Consolas">Consolas</option>
+            <option value="Cascadia Mono">Cascadia Mono</option>
+            <option value="Inconsolata">Inconsolata</option>
+            <option value="Source+Code+Pro">Source Code Pro</option>
+            <option value="IBM+Plex+Mono">IBM Plex Mono</option>
+            <option value="Space+Mono">Space Mono</option>
+            <option value="PT+Mono">PT Mono</option>
+            <option value="Ubuntu+Mono">Ubuntu Mono</option>
+            <option value="Nanum+Gothic+Coding">Nanum Gothic Coding</option>
+            <option value="Cousine">Cousine</option>
+            <option value="Fira+Mono">Fira Mono</option>
+            <option value="Share+Tech+Mono">Share Tech Mono</option>
+            <option value="Courier+Prime">Courier Prime</option>
+            <option value="Fira+Code">Fira Code</option>
+            <option value="Anonymous+Pro">Anonymous Pro</option>
+            <option value="Cutive+Mono">Cutive Mono</option>
+            <option value="VT323">VT323</option>
+            <option value="JetBrains+Mono">JetBrains Mono</option>
+            <option value="DM+Mono">DM Mono</option>
+            <option value="Overpass+Mono">Overpass Mono</option>
+            <option value="Noto+Sans+Mono">Noto Sans Mono</option>
+            <option value="Oxygen+Mono">Oxygen Mono</option>
+            <option value="Nova+Mono">Nova Mono</option>
+            <option value="Azeret+Mono">Azeret Mono</option>
+            <option value="B612+Mono">B612 Mono</option>
+            <option value="Syne+Mono">Syne Mono</option>
+            <option value="Major+Mono+Display+Xanh+Mono">Major Mono Display Xanh Mono</option>
+            <option value="Red+Hat+Mono">Red Hat Mono</option>
+            <option value="Fragment+Mono">Fragment Mono</option>
+            <option value="Spline+Sans+Mono">Spline Sans Mono</option>
+            <option value="Chivo+Mono">Chivo Mono</option>
+            <option value="Martian+Mono">Martian Mono</option>
+
+        </select>
+
+        <div style="height: 5px"></div>
+
+        Font Size: <input id="inputFontSize" type="number" style="width: 50px" value="9" step=".1" oninput="updateFont();" /> pt 
+
+        <span style="display: inline-block; width: 30px;"></span>
+
+        Line Height: <input id="inputLineHeight" type="text" style="width: 80px" value="140%" oninput="updateFont();" />
     </form>
 
     <div class="content">
@@ -155,6 +205,35 @@
             newlink.setAttribute("ishljs", "1");
 
             head.appendChild(newlink);
+        }
+
+        function updateFont() {
+            try {
+                let newFont = document.getElementById("dropFont").value;
+                let newFontSize = document.getElementById("inputFontSize").value;
+                let newLineHeight = document.getElementById("inputLineHeight").value;
+
+                let oldStyle = document.getElementById("style1");
+                oldStyle.remove();
+
+                let newFontFamily = newFont.replace("+", " ");
+                let newStyle = `
+@import url('https://fonts.googleapis.com/css2?family=${newFont}&display=swap');
+pre, code {
+    font-family: "${newFontFamily}", monospace;
+    font-size: ${newFontSize}pt;
+    line-height: ${newLineHeight};
+}`;
+                const style = document.createElement("style")
+                style.id = "style1";
+                style.type = "text/css";
+                style.textContent = newStyle;
+                document.head.appendChild(style)
+
+            }
+            catch (err) {
+                alert(err);
+            }
         }
     </script>
 
