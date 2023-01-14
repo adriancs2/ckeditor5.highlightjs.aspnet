@@ -149,3 +149,14 @@ Add 2 lines of javascript at the bottom of page to run highlight.js:
 
 Done. Just like that.
 
+Some screenshots of Highlight.js rendering:
+
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/render1.png)
+
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/render2.png)
+
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/render3.png)
+
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/render4.png)
+
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/render5.png)
