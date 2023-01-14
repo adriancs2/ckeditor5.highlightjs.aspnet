@@ -10,7 +10,7 @@ First download CKEditor 5 from their website:
 
 The `code blocks` plugin is needed. The easiest way to include it is by creating and downloading the “custom build“. Alternatively, you can download the `code blocks` plugin separately and add it later during initialization of the editor in HTML page.
 
-It’s very easy to use CKEditor 5. After download, extract and include one single file "ckeditor.js" into your project solution. Yes, that’s is all you need to start using CKEditor 5.
+It’s very easy to use CKEditor 5. After download, extract and include one single file `ckeditor.js` into your project solution. Yes, that’s is all you need to start using CKEditor 5.
 
 At your ASP.NET/HTML page, add a textarea element:
 
