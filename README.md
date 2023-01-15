@@ -4,6 +4,8 @@
 
 CKEditor is a HTML editor. Highlight.js is a syntax highligting tool. This article will introduce the implementation of both in ASP.NET.
 
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/ckeditor5_hljs2.png)
+
 First download CKEditor 5 from their website:
 
 [https://ckeditor.com/ckeditor-5/download/](https://ckeditor.com/ckeditor-5/download/)
