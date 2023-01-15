@@ -115,11 +115,11 @@ Example of input:
 
 Example of output:
 
-![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/ckeditor_aspnet_4.png)
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/ckeditor_aspnet_5.png)
 
 The output of text can be loaded on another page, for example:
 
-![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/ckeditor_aspnet_5.png)
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/ckeditor_aspnet_6.png)
 
 
 # Highlight.js – Syntax Highlighting
@@ -149,6 +149,126 @@ Add 2 lines of javascript at the bottom of page to run highlight.js:
 ```
 
 Done. Just like that.
+
+## Displaying Language Type and “Copy” Button
+
+Example (at right top corner):
+
+![](https://raw.githubusercontent.com/adriancs2/ckeditor5.highlightjs.aspnet/main/wiki/ckeditor_aspnet_7.png)
+
+A plugin called “HighlightJs Copy Badge” can be installed to enable this feature. Written by Rick Strahl.
+
+Download at: [https://github.com/RickStrahl/highlightjs-badge](https://github.com/RickStrahl/highlightjs-badge)
+
+Rick Strahl’s Blog: [https://weblog.west-wind.com/posts/2019/Dec/30/A-HighlightJs-Copy-Code-Badge-Component](https://weblog.west-wind.com/posts/2019/Dec/30/A-HighlightJs-Copy-Code-Badge-Component)
+
+By default, this plugin uses a “Copy” icon from Font Awesome. However, you can override this with any images. Below show the simplest default setup to use this "Copy Badge".
+
+Include the following CSS link to import Font Awesome:
+
+```html
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+ rel="stylesheet" />
+ ```
+ 
+Include the following javascript file obtained from Rick Strahl github site:
+
+```html
+<script src="highlightjs-badge.min.js"></script>
+```
+
+Execute the code as shown below. Due to it has to be run after the main “highlight.js”. Therefore, we can include a timer to delay the execution:
+
+```javascript
+// wait for the page to fully loaded
+window.onload = new function () {
+
+    // set a timer to delay the execution
+    // for waiting highlight.js to complete
+    setTimeout(function () {
+        window.highlightJsBadge();
+    }, 100);
+}
+```
+
+Done! and.. yupe just like that.
+
+The styling of the “language type and copy button” block can be override with the following css:
+
+```css
+/* The "copy" box container */
+.code-badge {
+
+}
+
+/* The "copy" button */
+.code-badge-copy-icon {
+
+}
+
+/* The "copy" button, after clicked */
+.text-success {
+
+}
+
+/* The text in the container */
+.code-badge-language {
+
+}
+
+/* The "copy" box container, at mouse hover */
+.code-badge:hover {
+
+}
+
+/* The text in the container, at mouse hover */
+.code-badge:hover .code-badge-language {
+
+}
+```
+
+Example of styling overide:
+
+```css
+/* The "copy" box container */
+.code-badge {
+    background: #555 !important;
+    padding: 8px !important;
+    opacity: 0.5 !important;
+    transition: opacity linear 0.5s !important;
+}
+
+/* The "copy" button */
+.code-badge-copy-icon {
+    font-size: 1.3em !important;
+}
+
+/* The "copy" button, after clicked */
+.text-success {
+    color: #b6ff00;
+}
+
+/* The text in the container */
+.code-badge-language {
+    margin-right: 10px;
+    font-weight: 700 !important;
+    color: #ffafaf !important;
+    transition: color linear 0.5s !important;
+}
+
+/* The "copy" box container, at mouse hover */
+.code-badge:hover {
+    opacity: 1 !important;
+    background: #4f4f4f !important;
+}
+
+/* The text in the container, at mouse hover */
+.code-badge:hover .code-badge-language {
+    color: #ff4343 !important;
+}
+```
+
+Done.
 
 Some screenshots of Highlight.js rendering:
 
