@@ -45,6 +45,7 @@
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
+    <%-- Styling the "Copy: Button Box --%>
 
     <style>
         
@@ -278,7 +279,8 @@ pre, code {
         // wait for the page to fully loaded
         window.onload = new function () {
 
-            // delay the execution, for waiting highlight.js to complete
+            // set a timer to delay the execution
+            // for waiting highlight.js to complete
             setTimeout(function () {
                 window.highlightJsBadge();
             }, 100);
