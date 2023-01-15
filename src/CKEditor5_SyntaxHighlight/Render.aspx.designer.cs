@@ -24,6 +24,15 @@ namespace CKEditor5_SyntaxHighlight
         protected global::System.Web.UI.HtmlControls.HtmlHead head;
 
         /// <summary>
+        /// link_hljs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink link_hljs;
+
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>

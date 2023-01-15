@@ -41,7 +41,7 @@
         }
     </style>
 
-    <link href="/highlight.js/styles/vs2015.min.css" rel="stylesheet" ishljs="1" />
+    <link href="/highlight.js/styles/vs2015.min.css" rel="stylesheet" id="link_hljs" />
 
 </head>
 <body>
@@ -161,7 +161,8 @@
             <option value="Azeret+Mono">Azeret Mono</option>
             <option value="B612+Mono">B612 Mono</option>
             <option value="Syne+Mono">Syne Mono</option>
-            <option value="Major+Mono+Display+Xanh+Mono">Major Mono Display Xanh Mono</option>
+            <option value="Major+Mono+Display">Major Mono Display</option>
+            <option value="Xanh+Mono">Xanh Mono</option>
             <option value="Red+Hat+Mono">Red Hat Mono</option>
             <option value="Fragment+Mono">Fragment Mono</option>
             <option value="Spline+Sans+Mono">Spline Sans Mono</option>
@@ -189,22 +190,8 @@
             let cssfile = document.getElementById("dropStyle").value;
             let newurl = `/highlight.js/styles/${cssfile}`;
 
-            let head = document.getElementById("head");
-
-            let oldLinks = head.getElementsByTagName("link");
-
-            for (let i = 0; i < oldLinks.length; i++) {
-                if (oldLinks[i].hasAttribute("ishljs")) {
-                    oldLinks[i].remove();
-                }
-            }
-
-            let newlink = document.createElement("link");
-            newlink.href = newurl;
-            newlink.rel = "stylesheet";
-            newlink.setAttribute("ishljs", "1");
-
-            head.appendChild(newlink);
+            let link_hljs = document.getElementById("link_hljs");
+            link_hljs.href = newurl;
         }
 
         function updateFont() {
@@ -213,10 +200,9 @@
                 let newFontSize = document.getElementById("inputFontSize").value;
                 let newLineHeight = document.getElementById("inputLineHeight").value;
 
-                let oldStyle = document.getElementById("style1");
-                oldStyle.remove();
+                let style = document.getElementById("style1");
 
-                let newFontFamily = newFont.replace("+", " ");
+                let newFontFamily = newFont.replaceAll("+", " ");
                 let newStyle = `
 @import url('https://fonts.googleapis.com/css2?family=${newFont}&display=swap');
 pre, code {
@@ -224,11 +210,8 @@ pre, code {
     font-size: ${newFontSize}pt;
     line-height: ${newLineHeight};
 }`;
-                const style = document.createElement("style")
-                style.id = "style1";
-                style.type = "text/css";
+
                 style.textContent = newStyle;
-                document.head.appendChild(style)
 
             }
             catch (err) {
