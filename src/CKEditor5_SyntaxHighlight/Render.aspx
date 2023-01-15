@@ -6,40 +6,40 @@
 <head id="head" runat="server">
     <title></title>
     <style type="text/css">
-        body {
-            font-family: Arial;
-            font-size: 10pt;
-            padding: 0;
-            margin: 0;
-            padding-top: 45px;
-        }
+    body {
+        font-family: Arial;
+        font-size: 10pt;
+        padding: 0;
+        margin: 0;
+        padding-top: 45px;
+    }
 
-        form {
-            position: fixed;
-            background: #dedede;
-            top: 0;
-            padding: 7px;
-            width: 100%;
-        }
+    form {
+        position: fixed;
+        background: #dedede;
+        top: 0;
+        padding: 7px;
+        width: 100%;
+    }
 
-        .content {
-            padding: 10px;
-        }
+    .content {
+        padding: 10px;
+    }
 
-        img {
-            max-width: 600px;
-        }
-    </style>
+    img {
+        max-width: 600px;
+    }
+</style>
 
     <style id="style1" type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-        pre, code {
-            font-family: "Roboto Mono", monospace;
-            font-size: 9pt;
-            line-height: 140%;
-        }
-    </style>
+    pre, code {
+        font-family: "Roboto Mono", monospace;
+        font-size: 9pt;
+        line-height: 140%;
+    }
+</style>
 
     <link href="/highlight.js/styles/vs2015.min.css" rel="stylesheet" id="link_hljs" />
 
@@ -48,45 +48,43 @@
     <%-- Styling the "Copy: Button Box --%>
 
     <style>
-        
-        /* The "copy" box container */
-        .code-badge {
-            background: #555 !important;
-            padding: 8px !important;
-            opacity: 0.5 !important;
-            transition: opacity linear 0.5s !important;
-        }
+    /* The "copy" box container */
+    .code-badge {
+        background: #555 !important;
+        padding: 8px !important;
+        opacity: 0.5 !important;
+        transition: opacity linear 0.5s !important;
+    }
 
-        /* The "copy" button */
-        .code-badge-copy-icon {
-            font-size: 1.3em !important;
-        }
+    /* The "copy" button */
+    .code-badge-copy-icon {
+        font-size: 1.3em !important;
+    }
 
-        /* The "copy" button, after clicked */
-        .text-success {
-            color: #b6ff00;
-        }
+    /* The "copy" button, after clicked */
+    .text-success {
+        color: #b6ff00;
+    }
 
-        /* The text in the container */
-        .code-badge-language {
-            margin-right: 10px;
-            font-weight: 700 !important;
-            color: #ffafaf !important;
-            transition: color linear 0.5s !important;
-        }
+    /* The text in the container */
+    .code-badge-language {
+        margin-right: 10px;
+        font-weight: 700 !important;
+        color: #ffafaf !important;
+        transition: color linear 0.5s !important;
+    }
 
-        /* The "copy" box container, at mouse hover */
-        .code-badge:hover {
-            opacity: 1 !important;
-            background: #4f4f4f !important;
-        }
+    /* The "copy" box container, at mouse hover */
+    .code-badge:hover {
+        opacity: 1 !important;
+        background: #4f4f4f !important;
+    }
 
         /* The text in the container, at mouse hover */
         .code-badge:hover .code-badge-language {
             color: #ff4343 !important;
         }
-
-    </style>
+</style>
 
 </head>
 <body>
@@ -275,7 +273,7 @@ pre, code {
     <script src="/highlight.js/highlightjs-badge.min.js"></script>
 
     <script>
-        
+
         // wait for the page to fully loaded
         window.onload = new function () {
 
@@ -285,7 +283,7 @@ pre, code {
                 window.highlightJsBadge();
             }, 100);
         }
-        
+
     </script>
 
 </body>
