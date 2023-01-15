@@ -64,6 +64,7 @@
     <Content Include="CKEditor5\ckeditor.js" />
     <Content Include="Default.aspx" />
     <Content Include="default.txt" />
+    <Content Include="highlight.js\highlightjs-badge.min.js" />
     <Content Include="highlight.js\highlight.min.js" />
     <Content Include="highlight.js\styles\a11y-dark.min.css" />
     <Content Include="highlight.js\styles\a11y-light.min.css" />

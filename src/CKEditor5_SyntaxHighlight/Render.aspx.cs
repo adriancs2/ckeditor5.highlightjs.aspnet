@@ -14,7 +14,13 @@ namespace CKEditor5_SyntaxHighlight
         {
             get
             {
-                return Session["text"] + "";
+                string t = Session["text"] + "";
+                if (t.Length == 0)
+                {
+                    t = File.ReadAllText(Server.MapPath("~/default.txt"));
+                    Session["text"] = t;
+                }
+                return t;
             }
             set
             {

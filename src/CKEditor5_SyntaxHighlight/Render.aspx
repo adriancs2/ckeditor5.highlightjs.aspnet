@@ -43,6 +43,50 @@
 
     <link href="/highlight.js/styles/vs2015.min.css" rel="stylesheet" id="link_hljs" />
 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <style>
+        
+        /* The "copy" box container */
+        .code-badge {
+            background: #555 !important;
+            padding: 8px !important;
+            opacity: 0.5 !important;
+            transition: opacity linear 0.5s !important;
+        }
+
+        /* The "copy" button */
+        .code-badge-copy-icon {
+            font-size: 1.3em !important;
+        }
+
+        /* The "copy" button, after clicked */
+        .text-success {
+            color: #b6ff00;
+        }
+
+        /* The text in the container */
+        .code-badge-language {
+            margin-right: 10px;
+            font-weight: 700 !important;
+            color: #ffafaf !important;
+            transition: color linear 0.5s !important;
+        }
+
+        /* The "copy" box container, at mouse hover */
+        .code-badge:hover {
+            opacity: 1 !important;
+            background: #4f4f4f !important;
+        }
+
+        /* The text in the container, at mouse hover */
+        .code-badge:hover .code-badge-language {
+            color: #ff4343 !important;
+        }
+
+    </style>
+
 </head>
 <body>
 
@@ -173,11 +217,14 @@
 
         <div style="height: 5px"></div>
 
-        Font Size: <input id="inputFontSize" type="number" style="width: 50px" value="9" step=".1" oninput="updateFont();" /> pt 
+        Font Size:
+        <input id="inputFontSize" type="number" style="width: 50px" value="9" step=".1" oninput="updateFont();" />
+        pt 
 
         <span style="display: inline-block; width: 30px;"></span>
 
-        Line Height: <input id="inputLineHeight" type="text" style="width: 80px" value="140%" oninput="updateFont();" />
+        Line Height:
+        <input id="inputLineHeight" type="text" style="width: 80px" value="140%" oninput="updateFont();" />
     </form>
 
     <div class="content">
@@ -222,6 +269,22 @@ pre, code {
 
     <script src="/highlight.js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+
+    <%-- Add on plugin to display language type and "copy" button --%>
+    <script src="/highlight.js/highlightjs-badge.min.js"></script>
+
+    <script>
+        
+        // wait for the page to fully loaded
+        window.onload = new function () {
+
+            // delay the execution, for waiting highlight.js to complete
+            setTimeout(function () {
+                window.highlightJsBadge();
+            }, 100);
+        }
+        
+    </script>
 
 </body>
 </html>
