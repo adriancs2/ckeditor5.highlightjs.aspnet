@@ -15,6 +15,7 @@
     }
 
     form {
+        z-index: 2;
         position: fixed;
         background: #dedede;
         top: 0;
